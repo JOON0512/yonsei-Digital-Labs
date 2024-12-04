@@ -17,3 +17,5 @@ Enabled user control to modify fractal parameters and zoom levels via hardware b
 Implemented memory-efficient data handling with True Dual-Port BRAM, supporting simultaneous read and write operations for seamless updates.
 
 Outcome: Successfully generated Julia sets with interactive zooming and parameter adjustments, demonstrating the fractal's self-similarity properties on an FPGA-based system.
+
+https://github.com/user-attachments/assets/0f636574-7286-41fd-9a38-38ded74be2ca
