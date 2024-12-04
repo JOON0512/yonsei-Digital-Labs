@@ -1,4 +1,6 @@
-Implemented Julia Set Visualization on PYNQ-Z2 FPGA
+#Final Project
+
+###Implemented Julia Set Visualization on PYNQ-Z2 FPGA
 
 Objective: Developed a system to calculate and display Julia sets, a type of fractal, on an LCD using the PYNQ-Z2 FPGA.
 
