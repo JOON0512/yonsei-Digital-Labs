@@ -1,23 +1,18 @@
-# Final Project
+# Julia set on FPGA
 
-### Implemented Julia Set Visualization on PYNQ-Z2 FPGA
+A Julia-set renderer for the PYNQ-Z2, built in Verilog for a digital-design course.
 
-Source restoration status (2026-10-25): the author's submitted Vivado archive has been recovered. [julia-set](julia-set) contains 12 Verilog source modules, PYNQ-Z2 constraints, BRAM IP configuration, a project creation script, and small arithmetic simulations. Vivado synthesis, timing closure and board operation have not been rerun. The original project outcome below records the historical experiment.
-
-Objective: Developed a system to calculate and display Julia sets, a type of fractal, on an LCD using the PYNQ-Z2 FPGA.
-
-Approach:
-Designed and implemented a pipeline consisting of multiple Verilog modules, including a viewport transformer for mapping screen coordinates to the complex plane, a pixel calculator for iterative fractal computations, and BRAM-based buffering for efficient data storage and retrieval.
-
-Utilized Q15.16 fixed-point arithmetic to maintain precision during complex number operations, handled by a custom multiplier module.
-
-Leveraged a modular and parallel design to optimize pixel computation across high-resolution displays (1280x720).
-
-Features:
-Rendered fractals in grayscale with brightness levels determined by the number of iterations before divergence.
-Enabled user control to modify fractal parameters and zoom levels via hardware buttons.
-Implemented memory-efficient data handling with True Dual-Port BRAM, supporting simultaneous read and write operations for seamless updates.
-
-Outcome: Successfully generated Julia sets with interactive zooming and parameter adjustments, demonstrating the fractal's self-similarity properties on an FPGA-based system.
+The renderer maps screen coordinates to the complex plane, computes iterations in Q15.16 fixed point, and buffers pixels in dual-port BRAM. Buttons control zoom and fractal parameters; iteration counts determine grayscale intensity.
 
 https://github.com/user-attachments/assets/0f636574-7286-41fd-9a38-38ded74be2ca
+
+## Build
+
+Requires Vivado 2020.2 and a PYNQ-Z2 (`xc7z020clg400-1`).
+
+```sh
+cd julia-set
+vivado -mode batch -source create_project.tcl
+```
+
+This creates the project in `julia-set/build/`. See [HDL and simulation notes](julia-set) for the source layout and arithmetic tests. Synthesis and board operation have not been rerun on this checkout.
