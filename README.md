@@ -2,7 +2,7 @@
 
 ### Implemented Julia Set Visualization on PYNQ-Z2 FPGA
 
-Source restoration status (2026-10-24): the author's project report and the existing demo are available, but the original Verilog/Vivado source archive has not yet been recovered. This repository currently documents the project; it is not a complete reproducible hardware build. The description below records the original project's design and outcome, not a new board validation.
+Source restoration status (2026-10-25): the author's submitted Vivado archive has been recovered. [julia-set](julia-set) contains 12 Verilog source modules, PYNQ-Z2 constraints, BRAM IP configuration, a project creation script, and small arithmetic simulations. Vivado synthesis, timing closure and board operation have not been rerun. The original project outcome below records the historical experiment.
 
 Objective: Developed a system to calculate and display Julia sets, a type of fractal, on an LCD using the PYNQ-Z2 FPGA.
 

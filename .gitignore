@@ -1,0 +1,17 @@
+
+# Local build products
+*.o
+*.ko
+*.pyc
+__pycache__/
+.DS_Store
+._*
+**/build/
+**/class/class
+**/template/vector
+**/thread/thread
+**/mpi/mpi
+**/mpi/output
+**/gpu/mandelbrot
+**/kite/kite
+**/float/float
